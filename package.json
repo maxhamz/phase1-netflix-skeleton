@@ -1,10 +1,10 @@
 {
-  "name": "finalProject",
+  "name": "phase1-netflix-skeleton",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +16,15 @@
     "express-session": "^1.17.0",
     "pg": "^7.18.2",
     "sequelize": "^5.21.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxhamz/phase1-netflix-skeleton.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxhamz/phase1-netflix-skeleton/issues"
+  },
+  "homepage": "https://github.com/maxhamz/phase1-netflix-skeleton#readme",
+  "description": ""
 }
