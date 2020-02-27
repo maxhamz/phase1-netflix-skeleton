@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT MOVIE DATA</title>
+</head>
+<body>
+    <h3>
+        <a href="/users/logout">LOGOUT</a>
+        <BR>
+        <a href="/playlists/<%= user.id %>">MY PLAYLIST</a>
+    </h3>
+
+    <form class="edit-form" method="POST" action="/movies/edit/<%= datum.id %>">
+        Name <br>
+        <input type="text" name="name" id="name" value="<%= datum.name %>"><br>
+        Release Year <br>
+        <input type="text" name="release_year" id="release_year" value="<%= datum.release_year %>"><br>
+        Genre<br>
+        <select id="genre" name="genre">
+            <option <%= (datum.genre === 'animation') ? 'selected' : '' %> value="animation">Animaton</option>
+            <option <%= (datum.genre === 'comedy') ? 'selected' : '' %> value="comedy">Comedy</option>
+            <option <%= (datum.genre === 'drama') ? 'selected' : '' %> value="drama">Drama</option>
+            <option <%= (datum.genre === 'horror') ? 'selected' : '' %> value="horror">Horror</option>
+            <option <%= (datum.genre === 'religious') ? 'selected' : '' %> value="religious">Religious</option>
+            <option <%= (datum.genre === 'thriller') ? 'selected' : '' %> value="thriller">Thriller</option>
+        </select><br>
+        Audience<br>
+        <select id="audience" name="audience">
+            <option <%= (datum.audience === 'G') ? 'selected' : '' %> value="G">General</option>
+            <option <%= (datum.audience === 'PG-13') ? 'selected' : '' %> value="PG-13">13 Years Old & Above</option>
+            <option <%= (datum.audience === 'R') ? 'selected' : '' %> value="R">Above 18 Years Old Only</option>
+        </select><br><br>
+
+        <input type="submit" value="edit"><br>
+        <a href="/movies">Cancel</a>
+    </form>
+    
+</body>
+</html>

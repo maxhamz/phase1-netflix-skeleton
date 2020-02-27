@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE GALLERY</title>
+</head>
+<body>
+    <h3>
+        <a href="/users/logout">LOGOUT</a>
+        <BR>
+        <a href="/playlists/<%=user.id %>">MY PLAYLIST</a>
+    </h3>
+
+    <table>
+        
+        <tr>
+            <% for(let i = 0; i < headers.length-2; i++) { %>
+                <th> <%= headers[i].toUpperCase() %>  </th>
+            <% } %>
+                <th>  ACTION  </th>
+        </tr>
+
+        <% for(let j = 0; j < data.length; j++) { %>
+            <tr>
+                <% for(let k = 0; k < headers.length-2; k++) { %>
+                    <td> <%= data[j][headers[k]] %> </td>
+                <% } %>
+
+                <td>
+                    <form method="POST" action="/movies/add2Playlists/<%= data[j].id %>">
+                        <input type="submit" value="Add To Playlist">
+                    </form>
+
+                    <form method="GET" action="/movies/edit/<%= data[j].id %>">
+                        <input type="submit" value="Edit Data">
+                    </form>
+                </td>
+                    
+            </tr>
+        <% } %>
+    </table>
+    
+</body>
+</html>

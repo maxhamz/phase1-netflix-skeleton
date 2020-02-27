@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+<body>
+
+    <form method="POST" action="/users/login">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password">
+        <br><br>
+        <input type="submit" value="Login">
+    </form> 
+    <br>
+    <br>
+    <form method="GET" action="/signup">
+        <input type="submit" value="Signup">
+    </form>
+    <br>
+    <br>
+
+    <% if(errors) { %>
+        <h4 class="error-msg"> errors </h4>
+    <% } %>
+    
+</body>
+</html>

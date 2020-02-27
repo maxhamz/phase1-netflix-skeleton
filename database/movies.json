@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Zoolander",
+        "release_year": 2000,
+        "genre": "comedy",
+        "audience": "PG-13"
+    },
+
+    {
+        "name": "Rush Hour 2",
+        "release_year": 2001,
+        "genre": "action",
+        "audience": "PG-13"
+    },
+
+    {
+        "name": "007:Skyfall",
+        "release_year": 2012,
+        "genre": "thriller",
+        "audience": "R"
+    },
+
+    {
+        "name": "The Silence of the Lambs",
+        "release_year": 1991,
+        "genre": "thriller",
+        "audience": "R"
+    },
+
+    {
+        "name": "Pocahontas",
+        "release_year": 1995,
+        "genre": "adventure",
+        "audience": "G"
+    },
+
+    {
+        "name": "Denziman",
+        "release_year": 1980,
+        "genre": "adventure",
+        "audience": "G"
+    }
+]
