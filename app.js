@@ -1,4 +1,4 @@
-const PORT = 4000
+const PORT = process.env.port || 4000
 const express = require("express")
 const session = require("express-session")
 const app = express()
